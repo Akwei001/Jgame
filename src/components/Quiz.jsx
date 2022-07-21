@@ -216,18 +216,18 @@ const Quiz = () => {
   }, []);
 
   return (
-    <div className='min-h-screen bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white text-center'>
+    <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
       <header className='p-6 mb-8'>
-        <h1 className=' flex justify-between text-2xl font-bold'>
+        <h1 className='flex justify-between text-2xl font-bold '>
           <div className='inline-block p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
             <Link
               to='/'
-              className='block px-8 py-3 text-sm font-medium  rounded-full hover:bg-transparent'
+              className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent'
             >
               Home
             </Link>
           </div>
-          <div className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+          <div className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
             Quiz
           </div>
         </h1>
@@ -240,7 +240,7 @@ const Quiz = () => {
       </header>
 
       <div className='flex justify-center'>
-        <div className='bg-white text-black text-9xl font-bold mb-8 rounded shadow-md'>
+        <div className='mb-8 font-bold text-black bg-white rounded shadow-md text-9xl'>
           {allTiles[current].hirigana || allTiles[current].katakana}
         </div>
       </div>
@@ -251,7 +251,7 @@ const Quiz = () => {
             type='text'
             onChange={handleChange}
             value={input}
-            className='block w-24 bg-transparent border-b-2 border-b-white mx-auto outline-none text-center text-6xl pb-2'
+            className='block w-24 pb-2 mx-auto text-6xl text-center bg-transparent border-b-2 outline-none border-b-white'
           />
         </form>
       </div>
