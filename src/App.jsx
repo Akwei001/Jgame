@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Quiz from './components/Quiz';
 import Home from './components/Home';
@@ -7,7 +6,7 @@ import Katakana from './components/Katakana';
 
 function App() {
   return (
-    <div className='text text-4xl'>
+    <div className='text-4xl text'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Quiz' element={<Quiz />} />

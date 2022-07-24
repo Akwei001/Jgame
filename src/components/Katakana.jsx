@@ -77,6 +77,8 @@ const katakanaTile = [
   { romaji: 'v', katakana: 'ヴ' },
 ];
 
+console.log(typeof katakanaTile);
+
 function Katakana() {
   const [ktile, setKtile] = useState(katakanaTile);
   return (

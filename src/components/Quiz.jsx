@@ -169,12 +169,14 @@ const Quiz = () => {
 
   const allTiles = [...hiraganaTile, ...katakanaTile];
 
+  console.log(typeof allTiles);
+
   const shuffleTile = () => {
     const allTiles = [...hiraganaTile, ...katakanaTile];
     const displayTileIndex = Math.floor(Math.random() * allTiles.length);
     setCurrent(displayTileIndex);
   };
-
+  console.log(typeof current);
   console.log(current);
   console.log(allTiles[current].romaji);
   const handleSubmit = (e) => {
