@@ -80,7 +80,8 @@ const hiraganaTile = [
 function Hiragana() {
   const [htile, setHtile] = useState(hiraganaTile);
   return (
-    <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
+    // <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
+    <div className='min-h-screen text-center text-white bg-slate-50'>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
           <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
