@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className='min-h-screen font-sans text-2xl text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
-      <h1 className='p-10 font-extrabold text-transparent  text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+      <h1 className='p-10 font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
         <div>Hira-Kana Game</div>
         <div className='text-4xl'>Test your knowledge</div>
       </h1>
