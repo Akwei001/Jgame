@@ -102,8 +102,8 @@ function Hiragana() {
         {htile.map((tile) => (
           <div key={tile.id}>
             <div className='text-6xl font-bold text-transparent bg-white shadow-lg rounded-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
-              <div className='py-20 '>{tile.hiragana}</div>
-              <div className='py-20 '>{tile.romaji}</div>
+              <div className='py-20'>{tile.hiragana}</div>
+              <div className='py-20'>{tile.romaji}</div>
             </div>
           </div>
         ))}

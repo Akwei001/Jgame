@@ -103,7 +103,7 @@ function Katakana() {
       <div className='grid grid-cols-5 gap-4 m-10'>
         {ktile.map((tile) => (
           <div key={tile.id}>
-            <div className='text-6xl font-bold text-black bg-white rounded shadow-md w-18 h-18'>
+            <div className='text-6xl font-bold text-transparent bg-white shadow-lg rounded-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
               <div className='py-20'>{tile.katakana}</div>
               <div className='py-20'>{tile.romaji}</div>
             </div>
