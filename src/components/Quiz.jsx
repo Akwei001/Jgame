@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -179,6 +178,7 @@ const Quiz = () => {
   console.log(typeof current);
   console.log(current);
   console.log(allTiles[current].romaji);
+  console.log(allTiles[current].katakana);
   const handleSubmit = (e) => {
     e.preventDefault(e.target.value);
 
@@ -234,7 +234,7 @@ const Quiz = () => {
           </div>
         </h1>
 
-        <div>
+        <div className='-pt-20'>
           <p>
             {score} / {highscore}
           </p>
@@ -242,7 +242,7 @@ const Quiz = () => {
       </header>
 
       <div className='flex justify-center'>
-        <div className='mb-8 font-bold text-black bg-white rounded shadow-md text-9xl'>
+        <div className='py-20 mt-8 mb-8 font-bold text-black bg-white rounded shadow-md text-9xl'>
           {allTiles[current].hirigana || allTiles[current].katakana}
         </div>
       </div>
