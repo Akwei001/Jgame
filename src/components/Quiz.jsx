@@ -234,7 +234,7 @@ const Quiz = () => {
           </div>
         </h1>
 
-        <div className='-pt-20'>
+        <div className='pt-20'>
           <p>
             {score} / {highscore}
           </p>
