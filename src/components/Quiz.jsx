@@ -242,7 +242,7 @@ const Quiz = () => {
       </header>
 
       <div className='flex justify-center'>
-        <div className='py-20 mt-8 mb-8 font-bold text-black bg-white rounded shadow-md text-9xl'>
+        <div className='py-20 mt-8 mb-8 font-bold text-black bg-white rounded shadow-md text-8xl'>
           {allTiles[current].hirigana || allTiles[current].katakana}
         </div>
       </div>
