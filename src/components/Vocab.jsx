@@ -117,10 +117,28 @@ const newVocab = [
   // },
 ];
 
-import React from 'react';
-
 function Vocab() {
-  return <div>Vocab</div>;
+  const [vocab, setVocab] = useState(newVocab);
+  return (
+    <div>
+      <p>Vocab</p>
+      <header className='p-6 mb-8'>
+        <div className='flex justify-between'>
+          <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+            <Link
+              to='/'
+              className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent'
+            >
+              Home
+            </Link>
+          </div>
+          <div className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+            Vocab
+          </div>
+        </div>
+      </header>
+    </div>
+  );
 }
 
 export default Vocab;
