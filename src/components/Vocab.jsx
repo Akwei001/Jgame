@@ -137,6 +137,18 @@ function Vocab() {
           </div>
         </div>
       </header>
+      <div className='grid grid-cols-5 gap-4 m-10'>
+        {newVocab.map((vocab) => (
+          <div key={vocab.id}>
+            <div>
+              <div>
+                {vocab.kanji}
+                {/* {vocab.English} */}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
