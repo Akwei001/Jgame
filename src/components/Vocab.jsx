@@ -137,15 +137,25 @@ function Vocab() {
           </div>
         </div>
       </header>
-      <div className='grid grid-cols-5 gap-4 m-10'>
+      <div className='grid grid-cols-1 gap-4 m-10 bg-gray-500'>
+        <table className='table-auto'>
+          <thead>
+            <tr>
+              <th>Kanji</th>
+              <th>English</th>
+              <th>Onyomi</th>
+              <th>Kunyomi</th>
+              <th>Kanji/Vocab</th>
+            </tr>
+          </thead>
+        </table>
         {newVocab.map((vocab) => (
           <div key={vocab.id}>
-            <div>
-              <div>
-                {vocab.kanji}
-                {/* {vocab.English} */}
-              </div>
-            </div>
+            {/* {vocab.kanji}
+              {vocab.English}
+              <div className=''>{vocab.Onyomi}</div>
+                <div className=''>{vocab.Kunyomi}</div>
+                <div className=''>{vocab.kanjiVocab}</div> */}
           </div>
         ))}
       </div>
