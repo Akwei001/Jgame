@@ -137,29 +137,38 @@ function Vocab() {
           </div>
         </div>
       </header>
-      <div className='grid grid-cols-1 gap-4 m-10 bg-gray-500'>
-        <table className='table-auto'>
-          <thead>
-            <tr>
-              <th>Kanji</th>
-              <th>English</th>
-              <th>Onyomi</th>
-              <th>Kunyomi</th>
-              <th>Kanji/Vocab</th>
-            </tr>
-          </thead>
-        </table>
+      {/* <div className='grid grid-cols-1 gap-4 m-10 bg-gray-500 rounded-lg'> */}
+      <table className='m-10 text-lg bg-gray-500 border border-collapse border-blue-400 rounded-lg table-auto'>
+        <thead>
+          <tr>
+            <th className='border border-blue-400 '>Kanji</th>
+            <th className='border border-blue-400 '>English</th>
+            <th className='border border-blue-400 '>Onyomi</th>
+            <th className='border border-blue-400 '>Kunyomi</th>
+            <th className='border border-blue-400 '>Kanji/Vocab</th>
+          </tr>
+        </thead>
         {newVocab.map((vocab) => (
-          <div key={vocab.id}>
-            {/* {vocab.kanji}
-              {vocab.English}
-              <div className=''>{vocab.Onyomi}</div>
-                <div className=''>{vocab.Kunyomi}</div>
-                <div className=''>{vocab.kanjiVocab}</div> */}
-          </div>
+          <tbody key={vocab.id}>
+            <th className='border border-blue-400 '>{vocab.kanji}</th>
+            <th className='border border-blue-400 '>{vocab.English}</th>
+            <th className='border border-blue-400 '>{vocab.Onyomi}</th>
+            <th className='border border-blue-400 '>{vocab.Kunyomi}</th>
+            <th className='border border-blue-400 '>{vocab.kanjiVocab}</th>
+          </tbody>
         ))}
-      </div>
+      </table>
+      {/* {newVocab.map((vocab) => (
+        <div key={vocab.id}>
+          {vocab.kanji}
+          {vocab.English}
+          <div className=''>{vocab.Onyomi}</div>
+          <div className=''>{vocab.Kunyomi}</div>
+          <div className=''>{vocab.kanjiVocab}</div>
+        </div>
+      ))} */}
     </div>
+    // </div>
   );
 }
 
