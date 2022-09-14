@@ -6,71 +6,71 @@ const newVocab = [
   {
     kanji: '一',
     English: 'one',
-    Onyomi: ['ichi', 'itsu'],
-    Kunyomi: ['hito(tsu)', 'hito'],
+    Onyomi: ['ichi,', 'itsu'],
+    Kunyomi: ['hito(tsu),', 'hito'],
     kanjiVocab: ['一人 (one person, alone)'],
   },
   {
     kanji: '二',
     English: 'Two',
     Onyomi: ['ni'],
-    Kunyomi: ['futa(tsu)', 'futa'],
+    Kunyomi: ['futa(tsu),', 'futa'],
     kanjiVocab: ['二人 (two people, pair)'],
   },
   {
     kanji: '三',
     English: 'Three',
     Onyomi: ['san'],
-    Kunyomi: ['mit(tsu)', 'mi'],
+    Kunyomi: ['mit(tsu),', 'mi'],
     kanjiVocab: ['	三日 (3rd day of the month)'],
   },
   {
     kanji: '四',
     English: 'Four',
     Onyomi: ['shi'],
-    Kunyomi: ['yo(tsu)', 'yo', 'yon'],
+    Kunyomi: ['yo(tsu),', 'yo,', 'yon'],
     kanjiVocab: ['四日 (4th day of the month)'],
   },
   {
     kanji: '五',
     English: 'Five',
     Onyomi: ['go'],
-    Kunyomi: ['itsu(tsu)', 'itsu'],
+    Kunyomi: ['itsu(tsu),', 'itsu'],
     kanjiVocab: ['五日 (5th day of the month)'],
   },
   {
     kanji: '六',
     English: 'Six',
     Onyomi: ['roku'],
-    Kunyomi: ['	mut(tsu)', 'mu'],
+    Kunyomi: ['	mut(tsu),', 'mu'],
     kanjiVocab: ['六日 (6th day of the month)'],
   },
   {
     kanji: '七',
     English: 'Seven',
     Onyomi: ['shichi'],
-    Kunyomi: ['nana(tsu)', ' nana'],
+    Kunyomi: ['nana(tsu),', ' nana'],
     kanjiVocab: ['七日 (7th day of the month)'],
   },
   {
     kanji: '八',
     English: 'Eight',
     Onyomi: ['hachi'],
-    Kunyomi: ['yat(tsu)', 'ya'],
+    Kunyomi: ['yat(tsu),', 'ya'],
     kanjiVocab: ['八日 (8th day of the month)'],
   },
   {
     kanji: '九',
     English: 'Nine',
     Onyomi: ['kyuu', 'ku'],
-    Kunyomi: ['kokono(tsu)', 'kokono'],
+    Kunyomi: ['kokono(tsu),', 'kokono'],
     kanjiVocab: ['九日 (9th day of the month)'],
   },
   {
     kanji: '十',
     English: 'Ten',
     Onyomi: ['juu', 'ji'],
-    Kunyomi: ['tou', 'to'],
+    Kunyomi: ['tou,', 'to'],
     kanjiVocab: ['十日 (10th day of the month)'],
   },
   {
@@ -90,7 +90,7 @@ const newVocab = [
   {
     kanji: '万',
     English: 'Ten Thousand',
-    Onyomi: ['man', 'ban'],
+    Onyomi: ['man,', 'ban'],
     Kunyomi: ['-'],
     kanjiVocab: ['	万年筆 (fountain pen)'],
   },
@@ -121,7 +121,6 @@ function Vocab() {
   const [vocab, setVocab] = useState(newVocab);
   return (
     <div>
-      <p>Vocab</p>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
           <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
@@ -138,23 +137,29 @@ function Vocab() {
         </div>
       </header>
       {/* <div className='grid grid-cols-1 gap-4 m-10 bg-gray-500 rounded-lg'> */}
-      <table className='m-10 text-lg bg-gray-500 border border-collapse border-blue-400 rounded-lg table-auto'>
+      <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
         <thead>
-          <tr>
-            <th className='border border-blue-400 '>Kanji</th>
-            <th className='border border-blue-400 '>English</th>
-            <th className='border border-blue-400 '>Onyomi</th>
-            <th className='border border-blue-400 '>Kunyomi</th>
-            <th className='border border-blue-400 '>Kanji/Vocab</th>
+          <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
+            <th className='p-2 border border-white '>Kanji</th>
+            <th className='p-2 border border-white '>English</th>
+            <th className='p-2 border border-white '>Onyomi</th>
+            <th className='p-2 border border-white '>Kunyomi</th>
+            <th className='p-2 border border-white '>Kanji/Vocab</th>
           </tr>
         </thead>
         {newVocab.map((vocab) => (
           <tbody key={vocab.id}>
-            <th className='border border-blue-400 '>{vocab.kanji}</th>
-            <th className='border border-blue-400 '>{vocab.English}</th>
-            <th className='border border-blue-400 '>{vocab.Onyomi}</th>
-            <th className='border border-blue-400 '>{vocab.Kunyomi}</th>
-            <th className='border border-blue-400 '>{vocab.kanjiVocab}</th>
+            <th className='p-2 text-sm border border-white '>{vocab.kanji}</th>
+            <th className='p-2 text-sm border border-white '>
+              {vocab.English}
+            </th>
+            <th className='p-2 text-sm border border-white '>{vocab.Onyomi}</th>
+            <th className='p-2 text-sm border border-white '>
+              {vocab.Kunyomi}
+            </th>
+            <th className='p-2 text-sm border border-white '>
+              {vocab.kanjiVocab}
+            </th>
           </tbody>
         ))}
       </table>
