@@ -100,7 +100,7 @@ function Katakana() {
         </div>
       </header>
 
-      <div className='grid grid-cols-5 gap-4 m-10'>
+      {/* <div className='grid grid-cols-5 gap-4 m-10'>
         {ktile.map((tile) => (
           <div key={tile.id}>
             <div className='text-6xl font-bold text-transparent bg-white shadow-lg rounded-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
@@ -109,7 +109,27 @@ function Katakana() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+
+      <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
+        <thead>
+          <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
+            <th className='p-2 border border-white '>a</th>
+            <th className='p-2 border border-white '>b</th>
+            <th className='p-2 border border-white '>c</th>
+            <th className='p-2 border border-white '>d</th>
+            <th className='p-2 border border-white '>e</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <th className='p-2 text-sm border border-white '>1</th>
+          <th className='p-2 text-sm border border-white '>2</th>
+          <th className='p-2 text-sm border border-white '>3</th>
+          <th className='p-2 text-sm border border-white '>4</th>
+          <th className='p-2 text-sm border border-white '>5</th>
+        </tbody>
+      </table>
     </div>
   );
 }
