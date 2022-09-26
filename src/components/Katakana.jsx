@@ -3,15 +3,20 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const katakanaTile = [
-  { romaji: 'a', katakana: 'ア' },
-  { romaji: 'i', katakana: 'イ' },
-  { romaji: 'u', katakana: 'ウ' },
-  { romaji: 'e', katakana: 'エ' },
-  { romaji: 'o', katakana: 'オ' },
-  { romaji: 'ka', katakana: 'カ' },
-  { romaji: 'ki', katakana: 'キ' },
-  { romaji: 'ku', katakana: 'ク' },
-  { romaji: 'ke', katakana: 'ケ' },
+  [
+    { romaji: 'a', katakana: 'ア' },
+    { romaji: 'i', katakana: 'イ' },
+    { romaji: 'u', katakana: 'ウ' },
+    { romaji: 'e', katakana: 'エ' },
+    { romaji: 'o', katakana: 'オ' },
+  ],
+  [
+    { romaji: 'ka', katakana: 'カ' },
+    { romaji: 'ki', katakana: 'キ' },
+    { romaji: 'ku', katakana: 'ク' },
+    { romaji: 'ke', katakana: 'ケ' },
+  ],
+
   { romaji: 'ko', katakana: 'コ' },
   { romaji: 'sa', katakana: 'サ' },
   { romaji: 'shi', katakana: 'シ' },
