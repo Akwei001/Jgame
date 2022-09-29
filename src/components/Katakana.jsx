@@ -3,20 +3,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const katakanaTile = [
-  [
-    { romaji: 'a', katakana: 'ア' },
-    { romaji: 'i', katakana: 'イ' },
-    { romaji: 'u', katakana: 'ウ' },
-    { romaji: 'e', katakana: 'エ' },
-    { romaji: 'o', katakana: 'オ' },
-  ],
-  [
-    { romaji: 'ka', katakana: 'カ' },
-    { romaji: 'ki', katakana: 'キ' },
-    { romaji: 'ku', katakana: 'ク' },
-    { romaji: 'ke', katakana: 'ケ' },
-  ],
-
+  { romaji: 'a', katakana: 'ア' },
+  { romaji: 'i', katakana: 'イ' },
+  { romaji: 'u', katakana: 'ウ' },
+  { romaji: 'e', katakana: 'エ' },
+  { romaji: 'o', katakana: 'オ' },
+  { romaji: 'ka', katakana: 'カ' },
+  { romaji: 'ki', katakana: 'キ' },
+  { romaji: 'ku', katakana: 'ク' },
+  { romaji: 'ke', katakana: 'ケ' },
   { romaji: 'ko', katakana: 'コ' },
   { romaji: 'sa', katakana: 'サ' },
   { romaji: 'shi', katakana: 'シ' },
@@ -105,7 +100,7 @@ function Katakana() {
         </div>
       </header>
 
-      {/* <div className='grid grid-cols-5 gap-4 m-10'>
+      <div className='grid grid-cols-5 gap-4 m-10'>
         {ktile.map((tile) => (
           <div key={tile.id}>
             <div className='text-6xl font-bold text-transparent bg-white shadow-lg rounded-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
@@ -114,38 +109,38 @@ function Katakana() {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
 
-      <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
-        <thead>
-          <tr className='text-black rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
-            {/* <th className='p-2 border border-white '>a</th>
-            <th className='p-2 border border-white '>b</th>
-            <th className='p-2 border border-white '>c</th>
-            <th className='p-2 border border-white '>d</th>
-            <th className='p-2 border border-white '>e</th> */}
-          </tr>
-        </thead>
-        {ktile.map((tile) => (
-          <tbody className='text-black' key={tile.id}>
-            <th className='p-2 text-sm border border-white '>
-              <th className='p-2'>{tile.katakana}</th>
-              <th className='p-2'>{tile.romaji}</th>
-            </th>
+      {/* <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
+          <thead>
+            <tr className='text-black rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
+              <th className='p-2 border border-white '>a</th>
+              <th className='p-2 border border-white '>b</th>
+              <th className='p-2 border border-white '>c</th>
+              <th className='p-2 border border-white '>d</th>
+              <th className='p-2 border border-white '>e</th>
+            </tr>
+          </thead>
+          {ktile.map((tile) => (
+            <tbody className='text-black' key={tile.id}>
+              <th className='p-2 text-sm border border-white '>
+                <th className='p-2'>{tile.katakana}</th>
+                <th className='p-2'>{tile.romaji}</th>
+              </th>
+              <th className='p-2 text-sm border border-white '>2</th>
+              <th className='p-2 text-sm border border-white '>3</th>
+              <th className='p-2 text-sm border border-white '>4</th>
+              <th className='p-2 text-sm border border-white '>5</th>
+            </tbody>
+          ))}
+          <tbody>
+            <th className='p-2 text-sm border border-white '>1</th>
             <th className='p-2 text-sm border border-white '>2</th>
             <th className='p-2 text-sm border border-white '>3</th>
             <th className='p-2 text-sm border border-white '>4</th>
             <th className='p-2 text-sm border border-white '>5</th>
           </tbody>
-        ))}
-        {/* <tbody>
-          <th className='p-2 text-sm border border-white '>1</th>
-          <th className='p-2 text-sm border border-white '>2</th>
-          <th className='p-2 text-sm border border-white '>3</th>
-          <th className='p-2 text-sm border border-white '>4</th>
-          <th className='p-2 text-sm border border-white '>5</th>
-        </tbody> */}
-      </table>
+        </table> */}
     </div>
   );
 }
