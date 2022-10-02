@@ -27,6 +27,14 @@ function Home() {
             Vocabualry list
           </Link>
         </div>
+        <div className='inline-block p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+          <Link
+            to='MemoryGame'
+            className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent'
+          >
+            Memory Game
+          </Link>
+        </div>
 
         <div className='inline-block p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
           <Link

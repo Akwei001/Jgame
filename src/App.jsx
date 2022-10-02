@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Hiragana from './components/Hiragana';
 import Katakana from './components/Katakana';
 import Vocab from './components/Vocab';
+import MemoryGame from './components/MemoryGame';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/Hiragana' element={<Hiragana />} />
         <Route path='/Katakana' element={<Katakana />} />
         <Route path='/Vocab' element={<Vocab />} />
+        <Route path='/MemoryGame' element={<MemoryGame />} />
       </Routes>
     </div>
   );
