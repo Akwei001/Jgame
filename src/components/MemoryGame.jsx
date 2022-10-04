@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Singlecard from './Singlecard';
 
 const gameData = [
   { hiragana: 'あ' },
@@ -40,12 +41,11 @@ const MemoryGame = () => {
             </Link>
           </div>
           <div className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
-            Vocab
+            Memory Game
           </div>
         </div>
       </header>
       <div className=''>
-        <h1 className=''>Memory Game</h1>
         <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
           <button
             onClick={shuffleCards}
@@ -54,12 +54,9 @@ const MemoryGame = () => {
             New Game
           </button>
         </div>
-        <div className='grid-col-2'>
+        <div className='grid grid-cols-5 m-4 '>
           {cards.map((card) => (
-            <div key={card.id}>
-              <div>{card.hiragana}</div>
-              <img src='/img/pngegg.png' />
-            </div>
+            <Singlecard key={card.id} card={card} />
           ))}
         </div>
       </div>
