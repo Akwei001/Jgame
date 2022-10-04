@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Singlecard from './Singlecard';
 
 const gameData = [
-  { hiragana: 'あ' },
-  { hiragana: 'い' },
-  { hiragana: 'う' },
-  { hiragana: 'え' },
-  { hiragana: 'お' },
+  { hiragana: 'あ', matched: false },
+  { hiragana: 'い', matched: false },
+  { hiragana: 'う', matched: false },
+  { hiragana: 'え', matched: false },
+  { hiragana: 'お', matched: false },
 ];
 
 console.log(gameData);
@@ -16,6 +16,8 @@ console.log(gameData);
 const MemoryGame = () => {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
+  const [choiceOne, setChoiceOne] = useState(null);
+  const [choiceTwo, setChoiceTwo] = useState(null);
 
   const shuffleCards = () => {
     const shuffledCards = [...gameData, ...gameData]
@@ -26,7 +28,39 @@ const MemoryGame = () => {
     setTurns(0);
   };
 
-  console.log(cards, turns);
+  //handle a choice
+  const handleChoice = (card) => {
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+  };
+
+  //compare 2 selected cards
+  useEffect(() => {
+    if (choiceOne && choiceTwo) {
+      if (choiceOne.hiragana === choiceTwo.hiragana) {
+        setCards((prevCards) => {
+          return prevCards.map((card) => {
+            if (card.hiragana === choiceOne.hiragana) {
+              return { ...card, matched: true };
+            } else {
+              return card;
+            }
+          });
+        });
+        resetTurn();
+      } else {
+        resetTurn();
+      }
+    }
+  }, [choiceOne, choiceTwo]);
+
+  console.log(cards);
+
+  // reset choices & increase turn
+  const resetTurn = () => {
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setTurns((prevTurns) => prevTurns + 1);
+  };
 
   return (
     <div>
@@ -56,7 +90,7 @@ const MemoryGame = () => {
         </div>
         <div className='grid grid-cols-5 m-4 '>
           {cards.map((card) => (
-            <Singlecard key={card.id} card={card} />
+            <Singlecard key={card.id} card={card} handleChoice={handleChoice} />
           ))}
         </div>
       </div>
