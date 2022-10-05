@@ -80,10 +80,10 @@ const MemoryGame = () => {
         </div>
       </header>
       <div className=''>
-        <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+        <div className=' p-[2px] ml-4 w-28 rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
           <button
             onClick={shuffleCards}
-            className='block px-2 py-3 text-sm font-medium rounded-full hover:bg-transparent'
+            className='block px-4 py-3 text-sm font-medium rounded-full hover:bg-transparent'
           >
             New Game
           </button>
