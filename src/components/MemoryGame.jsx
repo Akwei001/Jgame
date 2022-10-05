@@ -90,7 +90,12 @@ const MemoryGame = () => {
         </div>
         <div className='grid grid-cols-5 m-4 '>
           {cards.map((card) => (
-            <Singlecard key={card.id} card={card} handleChoice={handleChoice} />
+            <Singlecard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+            />
           ))}
         </div>
       </div>
