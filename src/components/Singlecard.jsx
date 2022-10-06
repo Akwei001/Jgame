@@ -8,7 +8,7 @@ const Singlecard = ({ card, handleChoice, flipped }) => {
   return (
     <div className={flipped ? 'flipped' : ''}>
       <div className='relative p-24'>
-        <div className='border-4 border-pink-500 rounded-lg  w-28 text-8xl h-28'>
+        <div className='border-4 border-pink-500 rounded-lg w-28 text-8xl h-28'>
           {card.hiragana}
         </div>
         <img
