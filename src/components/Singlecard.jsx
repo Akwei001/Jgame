@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 
 const Singlecard = ({ card, handleChoice, flipped }) => {
   const handleClick = () => {
@@ -16,7 +15,7 @@ const Singlecard = ({ card, handleChoice, flipped }) => {
         </div>
         <div
           onClick={handleClick}
-          className='rounded-lg  bg-gradient-to-r from-pink-500 to-purple-500 w-28 h-28'
+          className='rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 w-28 h-28'
         ></div>
         {/* <img
           onClick={handleClick}
