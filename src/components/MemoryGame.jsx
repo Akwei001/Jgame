@@ -74,7 +74,7 @@ const MemoryGame = () => {
     <div className='min-h-screen bg-slate-300'>
       <header className='p-6 mb-12'>
         <div className='flex justify-between'>
-          <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+          <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 text-white active:text-opacity-75 focus:outline-none focus:ring'>
             <Link
               to='/'
               className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent'
@@ -88,7 +88,7 @@ const MemoryGame = () => {
         </div>
       </header>
       <div className=''>
-        <div className=' p-[2px] ml-4 w-28 rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+        <div className=' p-[2px] ml-6 w-28 rounded-full bg-gradient-to-r from-pink-500  to-purple-500 text-white active:text-opacity-75 focus:outline-none focus:ring'>
           <button
             onClick={shuffleCards}
             className='block px-4 py-3 text-sm font-medium rounded-full hover:bg-transparent'
@@ -107,7 +107,9 @@ const MemoryGame = () => {
             />
           ))}
         </div>
-        <p>Turns: {turns}</p>
+        <p className='ml-6 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+          Turns: {turns}
+        </p>
       </div>
     </div>
   );

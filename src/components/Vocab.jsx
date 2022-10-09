@@ -123,7 +123,7 @@ function Vocab() {
     <div>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
-          <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
+          <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 text-white active:text-opacity-75 focus:outline-none focus:ring'>
             <Link
               to='/'
               className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent'
