@@ -90,7 +90,7 @@ const newVocab = [
   {
     kanji: '万',
     English: 'Ten Thousand',
-    Onyomi: ['man,', 'ban'],
+    Onyomi: ['man, ban'],
     Kunyomi: ['-'],
     kanjiVocab: ['	万年筆 (fountain pen)'],
   },
@@ -115,6 +115,121 @@ const newVocab = [
   //   Kunyomi: [],
   //   kanjiVocab: [],
   // },
+];
+
+const newVocab1 = [
+  {
+    kanji: '日',
+    English: ['Day, sun'],
+    Onyomi: ['nichi, jitsu'],
+    Kunyomi: ['hi, ka'],
+    kanjiVocab: ['明日 (tomorrow)'],
+  },
+  {
+    kanji: '週',
+    English: ['	Week'],
+    Onyomi: ['shuu', ''],
+    Kunyomi: ['-'],
+    kanjiVocab: ['毎週 (every week)'],
+  },
+  {
+    kanji: '月',
+    English: ['Month, moon'],
+    Onyomi: ['getsu, gatsu'],
+    Kunyomi: ['tsuki'],
+    kanjiVocab: ['月曜日 (Monday)'],
+  },
+  {
+    kanji: '年',
+    English: ['Year'],
+    Onyomi: ['nen'],
+    Kunyomi: ['toshi'],
+    kanjiVocab: ['今年 (this year), 去年 (last year)'],
+  },
+  {
+    kanji: '時',
+    English: ['	Time, hour'],
+    Onyomi: ['ji'],
+    Kunyomi: ['toki'],
+    kanjiVocab: ['時計 (clock, watch)'],
+  },
+  {
+    kanji: '間',
+    English: ['Time frame, span of time'],
+    Onyomi: ['kan, ken'],
+    Kunyomi: ['aida'],
+    kanjiVocab: ['	時間 (time, hours)'],
+  },
+  {
+    kanji: '分',
+    English: ['Minute, part, to understand, to divide'],
+    Onyomi: ['bun, bu, fun'],
+    Kunyomi: ['wa(karu)'],
+    kanjiVocab: ['	三十分 (thirty minutes), 自分 (oneself)'],
+  },
+  {
+    kanji: '午',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '前',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '後',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '今',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '先',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '来',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '半',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '毎',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
+  {
+    kanji: '何',
+    English: '',
+    Onyomi: [],
+    Kunyomi: [],
+    kanjiVocab: [],
+  },
 ];
 
 function Vocab() {
@@ -160,6 +275,54 @@ function Vocab() {
             <th className='p-2 text-sm border border-white '>
               {vocab.kanjiVocab}
             </th>
+          </tbody>
+        ))}
+      </table>
+
+      <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
+        <thead>
+          <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
+            <th className='p-2 border border-white '>Kanji</th>
+            <th className='p-2 border border-white '>English</th>
+            <th className='p-2 border border-white '>Onyomi</th>
+            <th className='p-2 border border-white '>Kunyomi</th>
+            <th className='p-2 border border-white '>Kanji/Vocab</th>
+          </tr>
+        </thead>
+        {newVocab1.map((vocab) => (
+          <tbody key={vocab.id}>
+            <th className='p-2 text-sm border border-white '>{vocab.kanji}</th>
+            <th className='p-2 text-sm border border-white '>
+              {' '}
+              {vocab.English}
+            </th>
+            <th className='p-2 text-sm border border-white '>{vocab.Onyomi}</th>
+            <th className='p-2 text-sm border border-white '>
+              {vocab.Kunyomi}
+            </th>
+            <th className='p-2 text-sm border border-white '>
+              {vocab.kanjiVocab}
+            </th>
+          </tbody>
+        ))}
+      </table>
+      <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
+        <thead>
+          <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
+            <th className='p-2 border border-white '>Kanji</th>
+            <th className='p-2 border border-white '>English</th>
+            <th className='p-2 border border-white '>Onyomi</th>
+            <th className='p-2 border border-white '>Kunyomi</th>
+            <th className='p-2 border border-white '>Kanji/Vocab</th>
+          </tr>
+        </thead>
+        {newVocab.map((vocab) => (
+          <tbody key={vocab.id}>
+            <th className='p-2 text-sm border border-white '></th>
+            <th className='p-2 text-sm border border-white '></th>
+            <th className='p-2 text-sm border border-white '></th>
+            <th className='p-2 text-sm border border-white '></th>
+            <th className='p-2 text-sm border border-white '></th>
           </tbody>
         ))}
       </table>
