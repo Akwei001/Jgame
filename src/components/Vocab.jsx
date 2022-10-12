@@ -455,7 +455,7 @@ const newVocab2 = [
 function Vocab() {
   const [vocab, setVocab] = useState(newVocab);
   return (
-    <div className=''>
+    <div className='bg-slate-200'>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
           <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 text-white active:text-opacity-75 focus:outline-none focus:ring'>
