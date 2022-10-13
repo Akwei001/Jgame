@@ -83,7 +83,7 @@ function Katakana() {
   const [ktile, setKtile] = useState(katakanaTile);
   return (
     // <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
-    <div className='min-h-screen text-center text-white bg-slate-200'>
+    <div className='min-h-screen text-center text-white bg-slate-50'>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
           <div className=' p-[2px] rounded-full bg-gradient-to-r from-pink-500  to-purple-500 hover:text-white active:text-opacity-75 focus:outline-none focus:ring'>
@@ -100,12 +100,18 @@ function Katakana() {
         </div>
       </header>
 
-      <div className='grid grid-cols-5 gap-4 m-10'>
+      <div className='grid grid-cols-5 gap-4 m-10 '>
         {ktile.map((tile) => (
           <div key={tile.id}>
-            <div className='text-6xl font-bold text-transparent bg-white shadow-lg rounded-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
-              <div className='py-20'>{tile.katakana}</div>
-              <div className='py-20'>{tile.romaji}</div>
+            <div className='text-6xl font-bold text-transparent shadow-lg bg-slate-200 rounded-xl '>
+              <div className=''>
+                <div className='py-20 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
+                  {tile.katakana}
+                </div>
+                <div className='py-20 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 w-18 h-18'>
+                  {tile.romaji}
+                </div>
+              </div>
             </div>
           </div>
         ))}
