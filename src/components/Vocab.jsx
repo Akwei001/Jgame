@@ -472,8 +472,8 @@ function Vocab() {
         </div>
       </header>
       <div className='grid grid-cols-1'>
+        <h3 className='ml-10'>Japanese Kanji for Numbers</h3>
         <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
-          <h2>Numbers</h2>
           <thead>
             <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
               <th className='p-2 border border-white '>Kanji</th>
@@ -503,7 +503,7 @@ function Vocab() {
             </tbody>
           ))}
         </table>
-
+        <h3 className='ml-10'>Japanese Kanji for Time</h3>
         <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
           <thead>
             <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
@@ -535,6 +535,8 @@ function Vocab() {
             </tbody>
           ))}
         </table>
+
+        <h3 className='ml-10'>Japanese Kanji for People & Things</h3>
         <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
           <thead>
             <tr className='text-white rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
