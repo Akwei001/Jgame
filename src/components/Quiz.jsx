@@ -229,6 +229,9 @@ const Quiz = () => {
               Home
             </Link>
           </div>
+          <button className='block px-8 py-3 text-sm font-medium hover:bg-transparent rounded-full bg-gradient-to-r from-pink-500  to-purple-500 '>
+            Reset Game
+          </button>
           <div className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
             Quiz
           </div>
