@@ -217,6 +217,12 @@ const Quiz = () => {
     setHighscore(parseInt(localStorage.getItem('score')) || 0);
   }, []);
 
+  const resetGame = () => {
+    shuffleTile();
+    setScore(0);
+    setHighscore(0);
+  };
+
   return (
     <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
       <header className='p-6 mb-8'>
@@ -229,7 +235,10 @@ const Quiz = () => {
               Home
             </Link>
           </div>
-          <button className='block px-8 py-3 text-sm font-medium hover:bg-transparent rounded-full bg-gradient-to-r from-pink-500  to-purple-500 '>
+          <button
+            onClick={resetGame}
+            className='block px-8 py-3 text-sm font-medium rounded-full hover:bg-transparent bg-gradient-to-r from-pink-500 to-purple-500 '
+          >
             Reset Game
           </button>
           <div className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
