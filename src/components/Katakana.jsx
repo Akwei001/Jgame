@@ -82,7 +82,6 @@ console.log(typeof katakanaTile);
 function Katakana() {
   const [ktile, setKtile] = useState(katakanaTile);
   return (
-    // <div className='min-h-screen text-center text-white bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
     <div className='min-h-screen text-center text-white bg-slate-50'>
       <header className='p-6 mb-8'>
         <div className='flex justify-between'>
@@ -116,37 +115,6 @@ function Katakana() {
           </div>
         ))}
       </div>
-
-      {/* <table className='m-10 text-lg bg-gray-200 border border-collapse rounded-lg table-auto'>
-          <thead>
-            <tr className='text-black rounded-lg bg-gradient-to-r from-purple-400 to-pink-600'>
-              <th className='p-2 border border-white '>a</th>
-              <th className='p-2 border border-white '>b</th>
-              <th className='p-2 border border-white '>c</th>
-              <th className='p-2 border border-white '>d</th>
-              <th className='p-2 border border-white '>e</th>
-            </tr>
-          </thead>
-          {ktile.map((tile) => (
-            <tbody className='text-black' key={tile.id}>
-              <th className='p-2 text-sm border border-white '>
-                <th className='p-2'>{tile.katakana}</th>
-                <th className='p-2'>{tile.romaji}</th>
-              </th>
-              <th className='p-2 text-sm border border-white '>2</th>
-              <th className='p-2 text-sm border border-white '>3</th>
-              <th className='p-2 text-sm border border-white '>4</th>
-              <th className='p-2 text-sm border border-white '>5</th>
-            </tbody>
-          ))}
-          <tbody>
-            <th className='p-2 text-sm border border-white '>1</th>
-            <th className='p-2 text-sm border border-white '>2</th>
-            <th className='p-2 text-sm border border-white '>3</th>
-            <th className='p-2 text-sm border border-white '>4</th>
-            <th className='p-2 text-sm border border-white '>5</th>
-          </tbody>
-        </table> */}
     </div>
   );
 }
