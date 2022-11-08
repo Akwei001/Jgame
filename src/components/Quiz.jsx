@@ -171,7 +171,7 @@ const Quiz = () => {
   console.log(typeof allTiles);
 
   const shuffleTile = () => {
-    const allTiles = [...hiraganaTile, ...katakanaTile];
+    // const allTiles = [...hiraganaTile];
     const displayTileIndex = Math.floor(Math.random() * allTiles.length);
     setCurrent(displayTileIndex);
   };
@@ -192,7 +192,7 @@ const Quiz = () => {
       );
       setError(false);
     } else {
-      const h = allTiles[current].hirigana;
+      const h = allTiles[current].hiragana;
       const hr = allTiles[current].romaji;
       const k = allTiles[current].katakana;
       const kr = allTiles[current].romaji;
@@ -254,8 +254,8 @@ const Quiz = () => {
       </header>
 
       <div className='flex justify-center'>
-        <div className='py-20 mt-8 mb-8 font-bold text-black bg-white rounded shadow-md text-8xl'>
-          {allTiles[current].hirigana || allTiles[current].katakana}
+        <div className='font-bold text-black bg-white rounded shadow-md text-8xl'>
+          {allTiles[current].hiragana || allTiles[current].katakana}
         </div>
       </div>
 
