@@ -2,16 +2,17 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Singlecard from './Singlecard';
+import { gameData } from '../../libs/data';
 
-const gameData = [
-  { hiragana: 'あ', matched: false },
-  { hiragana: 'い', matched: false },
-  { hiragana: 'う', matched: false },
-  { hiragana: 'え', matched: false },
-  { hiragana: 'お', matched: false },
-];
+// const gameData = [
+//   { hiragana: 'あ', matched: false },
+//   { hiragana: 'い', matched: false },
+//   { hiragana: 'う', matched: false },
+//   { hiragana: 'え', matched: false },
+//   { hiragana: 'お', matched: false },
+// ];
 
-console.log(gameData);
+// console.log(gameData);
 
 const MemoryGame = () => {
   const [cards, setCards] = useState([]);
